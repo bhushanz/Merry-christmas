@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia&family=Mountains+of+Christmas&display=swap');
+
+
+*,*::after,*::before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    border: 10px solid rgb(200, 167, 167);
+    background-image:linear-gradient(to top,rgb(108, 29, 49), rgb(28, 19, 22));
+    overflow: hidden;
+}
+.cursor {
+    background-image: url(img/pngwing.com.png);
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+   height: 200px;
+   z-index: 3;
+   width:200px ;
+   transform: translate(-50%, -50%);
+    top: -400px; 
+   height: 200px;
+   width:200px ;
+}
+.name{
+    position: relative;
+    top: 25%;
+    text-align: center; 
+    width: 100%;
+    font-family: 'Mountains of Christmas', serif;
+    font-weight: 900px; 
+    font-size: 5vw;
+}
+
+.name h1{
+    background-image: linear-gradient(to right, rgb(183, 5, 5),rgba(255, 255, 255, 0.528));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+span{
+    background: url(img/gift.png);
+    height: 60px;
+    width:60px ;
+    background-size: cover;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2;
+    animation: gift 3s linear forwards;
+}
+@keyframes gift {
+    0%{
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        transform:translate(50%,1000%);
+        opacity: 0;
+        filter: rotate(360deg);
+    }
+    
+}
+
+.snow{
+    position: relative;
+    display: flex;
+}
+.snow span{
+    position: relative;
+    min-width: 5px;
+    height:5px;
+    background-color: #fff;
+    border-radius: 50px;
+    margin: 0px 1vw;
+    box-shadow: -100px 20px 5px #fff,
+    100px 20px 10px #fff;
+    animation: snowrun 10s linear infinite;
+    animation-duration: calc(76s/var(--i));
+}
+.snow span:nth-child(even){
+    min-width: 10px;
+    height: 10px;
+}
+@keyframes snowrun {
+    0%{
+        transform: translateY(-50vh);
+    }
+    100%{
+        transform: translateY(100vh);
+    }
+}
+@media screen and (max-width:480px) {
+    .name{
+        position: relative;
+        top: 40%;
+        text-align: center; 
+        width: 100%;
+        font-family: 'Mountains of Christmas', serif;
+        font-weight: 900px; 
+        font-size: 6vw;
+    }
+    .photo{
+        height: 150px;
+        width: 180px;
+        position: absolute;
+        bottom: 130px;
+        left: 100px;
+        background-image: url(img/pngwing.com.png);
+        background-position:center ;
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+    }
+    
+}
